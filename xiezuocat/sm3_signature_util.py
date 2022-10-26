@@ -1,4 +1,4 @@
-import sm3
+from xiezuocat import sm3
 
 def signature_sm3_str(data):
     key_array = list(data.keys())

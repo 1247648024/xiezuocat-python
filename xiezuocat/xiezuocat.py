@@ -1,8 +1,7 @@
 import requests
-import json
 import time
 import base64
-import sm3_signature_util
+from xiezuocat import sm3_signature_util
 
 class Xiezuocat:
     def __init__(self, secret_key):
@@ -47,29 +46,3 @@ class Xiezuocat:
         base64_str = str(base64.b64encode(str(para_map).encode('utf-8')), "utf-8")
 
         return base64_str
-
-
-
-a = Xiezuocat("xx")
-# a.set_check_url("https://checkerbeta.metasotalaw.cn/api/text_check")
-# check_data = json.dumps({
-#             "texts": [
-#                 "哈哈哈。我天今吃了一顿饭",
-#                 "我想念十分赵忠祥。嘿嘿嘿。"
-#             ]
-#         })
-# check_result = a.check(check_data)
-# print("check_result === ", check_result)
-#
-# a.set_check_url("https://checkerbeta.metasotalaw.cn/html/api/rewrite")
-# rewrite_data = json.dumps({
-#   "items": [
-#     "一般"
-#   ],
-#   "level": "middle"
-# })
-# rewrite_result = a.rewrite(rewrite_data)
-# print("rewrite_result === ", rewrite_result)
-
-sign_result = a.signature("xx", "ll")
-print("sign_result === ", sign_result)

@@ -1,4 +1,8 @@
 # Editor directories and files
+/build
+/dist
+/xiezuocat.egg-info
+/xiezuocat/__pycache__
 .idea
-
+setup.py
 
